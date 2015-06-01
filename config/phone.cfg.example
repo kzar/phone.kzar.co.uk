@@ -1,0 +1,10 @@
+# Required for the Twilio API
+TWILIO_AUTH_TOKEN = "123"
+TWILIO_ACCOUNT_SID = "123"
+
+# Required to send emails
+GOOGLE_EMAIL = "user@domain.com"
+GOOGLE_PASSWORD = "password123"
+
+# Password protecting advanced SMS features
+SMS_PASSWORD = "123"
