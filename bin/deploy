@@ -1,5 +1,5 @@
 #!/bin/bash
 rsync -a ./* kzar@dub.kzar.co.uk:/home/apps/phone.kzar.co.uk/
 rsync --inplace config/nginx.conf kzar@dub.kzar.co.uk:/etc/nginx/sites-available/phone.kzar.co.uk
-ssh kzar@dub.kzar.co.uk "sudo /etc/init.d/nginx reload
+ssh kzar@dub.kzar.co.uk "sudo nginx -s reload
                          touch /home/apps/phone.kzar.co.uk/reload"
