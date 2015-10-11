@@ -14,12 +14,12 @@ My simple Twilio end point, mostly something I'm playing with for fun. I plan to
 
 ## Dependencies
 
-- uwsgi
 - nginx
 - python
 
 ### Python modules
 
+- flup
 - flask
 - yaml
 - twilio-python
@@ -36,9 +36,10 @@ Then browse to http://localhost:5000
 To deploy:
 
     bin/deploy
-    # (Make sure to create these symlinks the first time):
-    # - /etc/nginx/sites-enabled/phone.kzar.co.uk -> /etc/nginx/sites-available/phone.kzar.co.uk
-    # - /etc/uwsgi/apps-enabled/phone.kzar.co.uk.ini -> /home/apps/phone.kzar.co.uk/config/phone.kzar.co.uk.ini
+
+    # Type these commands on the server the first time:
+    sudo systemctl enable /home/apps/phone.kzar.co.uk/config/phone.kzar.co.uk.service
+    sudo ln -s /etc/nginx/sites-enabled/phone.kzar.co.uk /etc/nginx/sites-available/phone.kzar.co.uk
 
 Then http://phone.kzar.co.uk/ should respond to requests.
 

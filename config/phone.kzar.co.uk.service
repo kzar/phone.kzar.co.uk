@@ -1,0 +1,12 @@
+[Unit]
+Description=phone.kzar.co.uk
+
+[Service]
+Type=simple
+Environment="FCGI_BIND_ADDRESS=/tmp/phone.kzar.co.uk.sock"
+ExecStart=/home/apps/phone.kzar.co.uk/src/phone.fcgi
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
